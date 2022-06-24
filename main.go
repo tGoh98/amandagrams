@@ -7,9 +7,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
-	"time"
 
-	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -24,30 +22,30 @@ func main() {
 		// gin.SetMode(gin.ReleaseMode) // Uncomment for release mode
 		router := gin.Default()
 
-		router.Use(cors.New(cors.Config{
-			AllowOrigins:     []string{"*"},
-			AllowMethods:     []string{"GET"},
-			AllowHeaders:     []string{"Origin"},
-			ExposeHeaders:    []string{"Content-Length"},
-			AllowCredentials: true,
-			AllowOriginFunc: func(origin string) bool {
-				return origin == "https://github.com"
-			},
-			MaxAge: 12 * time.Hour,
-		}))
+		// router.Use(cors.New(cors.Config{
+		// 	AllowOrigins:     []string{"*"},
+		// 	AllowMethods:     []string{"GET"},
+		// 	AllowHeaders:     []string{"Origin"},
+		// 	ExposeHeaders:    []string{"Content-Length"},
+		// 	AllowCredentials: true,
+		// 	AllowOriginFunc: func(origin string) bool {
+		// 		return origin == "https://github.com"
+		// 	},
+		// 	MaxAge: 12 * time.Hour,
+		// }))
 
 		router.GET("/", greetings)
 		router.GET("/words", getWords)
 		router.GET("/randWord", randWord)
 
-		router.Run("localhost:8080") // https://gin-gonic.com/docs/deployment/
+		router.Run(":8000") // https://gin-gonic.com/docs/deployment/
 	}
 }
 
 // hello world for root index
 func greetings(c *gin.Context) {
 	c.JSON(200, gin.H{
-		"message": "pong",
+		"message": "beat amanda",
 	})
 }
 
