@@ -5,8 +5,6 @@ Deployed at: [https://amandagrams-tgoh98.koyeb.app/](https://amandagrams-tgoh98.
 Frontend: [https://github.com/tGoh98/amandagrams-react](https://github.com/tGoh98/amandagrams-react)  
 
 ### To run locally
-Runs on port 8000 (http://localhost:8000)
-
 #### Docker
 1. `docker build . -t [tag_name]`
 2. `docker run -p 8000:8000 --rm [tag_name]`  
