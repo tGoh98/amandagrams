@@ -22,18 +22,6 @@ func main() {
 		// gin.SetMode(gin.ReleaseMode) // Uncomment for release mode
 		router := gin.Default()
 
-		// router.Use(cors.New(cors.Config{
-		// 	AllowOrigins:     []string{"*"},
-		// 	AllowMethods:     []string{"GET"},
-		// 	AllowHeaders:     []string{"Origin"},
-		// 	ExposeHeaders:    []string{"Content-Length"},
-		// 	AllowCredentials: true,
-		// 	AllowOriginFunc: func(origin string) bool {
-		// 		return origin == "https://github.com"
-		// 	},
-		// 	MaxAge: 12 * time.Hour,
-		// }))
-
 		router.GET("/", greetings)
 		router.GET("/words", getWords)
 		router.GET("/randWord", randWord)
@@ -83,7 +71,7 @@ func getRandLetters(n int) string {
 	return sb.String()
 }
 
-// getWords reponds with the list of all words as JSON
+// getWords responds with the list of all words as JSON
 func getWords(c *gin.Context) {
 	base := c.Query("base")
 	nStr := c.Query("n")

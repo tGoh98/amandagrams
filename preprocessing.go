@@ -96,21 +96,6 @@ func GenerateMappings() {
 		log.Fatal(err)
 	}
 
-	// fmt.Println("Max word len:", maxLen)
-	// fmt.Println("lettersToWords3 has len:", len(lettersToWords3))
-	// fmt.Println("lettersToWords4 has len:", len(lettersToWords4))
-	// fmt.Println("lettersToWords5 has len:", len(lettersToWords5))
-	// fmt.Println("lettersToWords6 has len:", len(lettersToWords6))
-	// fmt.Println("lettersToWords7 has len:", len(lettersToWords7))
-	// fmt.Println("lettersToWords8 has len:", len(lettersToWords8))
-	// fmt.Println("lettersToWords9 has len:", len(lettersToWords9))
-	// fmt.Println("lettersToWords10 has len:", len(lettersToWords10))
-	// fmt.Println("lettersToWords11 has len:", len(lettersToWords11))
-	// fmt.Println("lettersToWords12 has len:", len(lettersToWords12))
-	// fmt.Println("lettersToWords13 has len:", len(lettersToWords13))
-	// fmt.Println("lettersToWords14 has len:", len(lettersToWords14))
-	// fmt.Println("lettersToWords15 has len:", len(lettersToWords15))
-
 	// Serialize sharded maps
 	serializeMap("lettersToWords3", lettersToWords3)
 	serializeMap("lettersToWords4", lettersToWords4)
